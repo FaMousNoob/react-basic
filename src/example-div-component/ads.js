@@ -40,5 +40,4 @@ class Ads extends Component {
   }
 }
 
-
-export default Ads
+export default Ads;

@@ -6,12 +6,14 @@ import Ads from './ads';
 
 class ExampleDivComponent extends Component {
   render() {
-    return <div>
+    return (
+      <div>
         <Header />
         <Carousel />
         <ProductList />
         <Ads />
-    </div>
+      </div>
+    );
   }
 }
 
