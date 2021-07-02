@@ -9,6 +9,7 @@ import './showroom_car/style.scss';
 import AppShowRoomCar from './showroom_car/AppShowRoomCar';
 // import Parent from './demo-props/Parent';
 // import DemoListAndKeys from './list-and-key/DemoListAndKeys';
+import HomeWork from './homework/HomeWork';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
       {/* <DemoDataBinding /> */}
       {/* <HandleEvent /> */}
       {/* <DemoLogin /> */}
-      <AppShowRoomCar />
+      {/* <AppShowRoomCar /> */}
       {/* <Parent /> */}
-    {/* <DemoListAndKeys></DemoListAndKeys> */}
+      {/* <DemoListAndKeys></DemoListAndKeys> */}
+      <HomeWork />
     </div>
   );
 }
