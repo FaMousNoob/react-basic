@@ -1,64 +1,90 @@
 import React, { Component } from 'react';
+import GlassessSection from './GlassessSection';
+import CardShowcase from './CardShowcase';
 
 class HomeWork extends Component {
   state = {
-    originGlassess: './img/glassesImage/v2.png',
+    model: './img/glassesImage/model.jpg',
+
+    originGlassess: {
+      source: './img/glassesImage/v2.png',
+      price: 50,
+      name: 'GUCCI G8759H',
+    },
+
     listGlassess: [
       {
         id: 1,
-        srcGlassess: './img/glassesImage/v1.png',
-        glassessPrice: 30,
-        glassessName: 'GUCCI G8850U',
+        source: './img/glassesImage/v1.png',
+        price: 30,
+        name: 'GUCCI G8850U',
       },
       {
         id: 2,
-        srcGlassess: './img/glassesImage/v2.png',
-        glassessPrice: 50,
-        glassessName: 'GUCCI G8759H',
+        source: './img/glassesImage/v2.png',
+        price: 50,
+        name: 'GUCCI G8759H',
       },
       {
         id: 3,
-        srcGlassess: './img/glassesImage/v3.png',
-        glassessPrice: 30,
-        glassessName: 'DIOR D6700HQ',
+        source: './img/glassesImage/v3.png',
+        price: 30,
+        name: 'DIOR D6700HQ',
       },
       {
         id: 4,
-        srcGlassess: './img/glassesImage/v4.png',
-        glassessPrice: 30,
-        glassessName: 'DIOR D6005U',
+        source: './img/glassesImage/v4.png',
+        price: 30,
+        name: 'DIOR D6005U',
       },
       {
         id: 5,
-        srcGlassess: './img/glassesImage/v5.png',
-        glassessPrice: 30,
-        glassessName: 'PRADA P8750',
+
+        source: './img/glassesImage/v5.png',
+        price: 30,
+        name: 'PRADA P8750',
       },
       {
         id: 6,
-        srcGlassess: './img/glassesImage/v6.png',
-        glassessPrice: 30,
-        glassessName: 'PRADA P9700',
+        source: './img/glassesImage/v6.png',
+        price: 30,
+        name: 'PRADA P9700',
       },
       {
         id: 7,
-        srcGlassess: './img/glassesImage/v7.png',
-        glassessPrice: 30,
-        glassessName: 'FENDI F8750',
+        source: './img/glassesImage/v7.png',
+        price: 30,
+        name: 'FENDI F8750',
       },
       {
         id: 8,
-        srcGlassess: './img/glassesImage/v8.png',
-        glassessPrice: 30,
-        glassessName: 'FENDI F8500',
+        source: './img/glassesImage/v8.png',
+        price: 30,
+        name: 'FENDI F8500',
       },
       {
         id: 9,
-        srcGlassess: './img/glassesImage/v9.png',
-        glassessPrice: 30,
-        glassessName: 'FENDI F4300',
+        source: './img/glassesImage/v9.png',
+        price: 30,
+        name: 'FENDI F4300',
       },
     ],
+  };
+
+  changeGlassess = (url, price, name) => {
+    this.setState({
+      originGlassess: { source: url, price: price, name: name },
+    });
+  };
+
+  renderGlassess = () => {
+    return this.state.listGlassess.map((glassess, index) => (
+      <GlassessSection
+        glassess={glassess}
+        key={index}
+        changeGlassess={this.changeGlassess}
+      />
+    ));
   };
 
   render() {
@@ -69,115 +95,13 @@ class HomeWork extends Component {
           <div className='d-flex justify-content-center align-items-center'>
             <div className='container row'>
               <section className='model d-flex justify-content-center col-5'>
-                <div
-                  className='card text-left'
-                  style={{ width: 300, position: 'relative' }}>
-                  <img
-                    className='card-img-top'
-                    src='./img/glassesImage/model.jpg'
-                    alt='hinh model'
-                  />
-                  <img
-                    src='./img/glassesImage/v2.png'
-                    alt='kinh'
-                    style={{
-                      width: 170,
-                      position: 'absolute',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      top: '16%',
-                    }}
-                  />
-                  <div className='card-body'>
-                    <span className='card-title badge-danger h3 px-2 rounded'>
-                      $50
-                    </span>
-                    <p className='card-text mt-2'>GUCCI G8759H</p>
-                  </div>
-                </div>
+                <CardShowcase
+                  originGlassess={this.state.originGlassess}
+                  modelPic={this.state.model}
+                />
               </section>
               <section className='glasses__list mt-4 d-flex justify-content-around flex-wrap col-7'>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v1.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v2.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v3.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v4.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v5.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v6.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v7.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v8.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
-                <div className='col-3'>
-                  <button className='btn btn-outline-secondary'>
-                    <img
-                      src='./img/glassesImage/v9.png'
-                      alt='hinh'
-                      style={{ width: 100, borderRadius: 20 }}
-                    />
-                  </button>
-                </div>
+                {this.renderGlassess()}
               </section>
             </div>
           </div>
