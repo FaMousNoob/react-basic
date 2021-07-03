@@ -6,10 +6,10 @@ import './showroom_car/style.scss';
 // import DemoDataBinding from './data-binding/DemoDataBinding';
 // import HandleEvent from './handleEvent/HandleEvent';
 // import DemoLogin from './demo-login/login';
-import AppShowRoomCar from './showroom_car/AppShowRoomCar';
+// import AppShowRoomCar from './showroom_car/AppShowRoomCar';
 // import Parent from './demo-props/Parent';
 // import DemoListAndKeys from './list-and-key/DemoListAndKeys';
-import HomeWork from './homework/HomeWork';
+import HomeWork from './homework/HomeWork.jsx';
 
 function App() {
   return (

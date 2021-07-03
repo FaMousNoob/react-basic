@@ -1,6 +1,66 @@
 import React, { Component } from 'react';
 
 class HomeWork extends Component {
+  state = {
+    originGlassess: './img/glassesImage/v2.png',
+    listGlassess: [
+      {
+        id: 1,
+        srcGlassess: './img/glassesImage/v1.png',
+        glassessPrice: 30,
+        glassessName: 'GUCCI G8850U',
+      },
+      {
+        id: 2,
+        srcGlassess: './img/glassesImage/v2.png',
+        glassessPrice: 50,
+        glassessName: 'GUCCI G8759H',
+      },
+      {
+        id: 3,
+        srcGlassess: './img/glassesImage/v3.png',
+        glassessPrice: 30,
+        glassessName: 'DIOR D6700HQ',
+      },
+      {
+        id: 4,
+        srcGlassess: './img/glassesImage/v4.png',
+        glassessPrice: 30,
+        glassessName: 'DIOR D6005U',
+      },
+      {
+        id: 5,
+        srcGlassess: './img/glassesImage/v5.png',
+        glassessPrice: 30,
+        glassessName: 'PRADA P8750',
+      },
+      {
+        id: 6,
+        srcGlassess: './img/glassesImage/v6.png',
+        glassessPrice: 30,
+        glassessName: 'PRADA P9700',
+      },
+      {
+        id: 7,
+        srcGlassess: './img/glassesImage/v7.png',
+        glassessPrice: 30,
+        glassessName: 'FENDI F8750',
+      },
+      {
+        id: 8,
+        srcGlassess: './img/glassesImage/v8.png',
+        glassessPrice: 30,
+        glassessName: 'FENDI F8500',
+      },
+      {
+        id: 9,
+        srcGlassess: './img/glassesImage/v9.png',
+        glassessPrice: 30,
+        glassessName: 'FENDI F4300',
+      },
+    ],
+  };
+
   render() {
     return (
       <div>
@@ -11,8 +71,7 @@ class HomeWork extends Component {
               <section className='model d-flex justify-content-center col-5'>
                 <div
                   className='card text-left'
-                  style={{ width: 300, position: 'relative' }}
-                >
+                  style={{ width: 300, position: 'relative' }}>
                   <img
                     className='card-img-top'
                     src='./img/glassesImage/model.jpg'
