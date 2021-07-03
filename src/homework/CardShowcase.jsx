@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class CardShowcase extends Component {
   render() {
-    const originGlassess = this.props.originGlassess;
+    const originGlasses = this.props.originGlassess;
     const modelPic = this.props.modelPic;
     return (
       <div
@@ -11,7 +11,7 @@ class CardShowcase extends Component {
       >
         <img className='card-img-top' src={modelPic} alt='hinh model' />
         <img
-          src={originGlassess.source}
+          src={originGlasses.source}
           alt='kinh'
           style={{
             width: 170,
@@ -23,9 +23,9 @@ class CardShowcase extends Component {
         />
         <div className='card-body'>
           <span className='card-title badge-danger h3 px-2 rounded'>
-            {originGlassess.price}$
+            {originGlasses.price}$
           </span>
-          <p className='card-text mt-2'>{originGlassess.name}</p>
+          <p className='card-text mt-2'>{originGlasses.name}</p>
         </div>
       </div>
     );

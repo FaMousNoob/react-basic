@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 
-class GlassessSection extends Component {
+class GlassesSection extends Component {
   render() {
-    const glassess = this.props.glassess;
+    const glasses = this.props.glasses;
     return (
       <div className='col-3'>
         <button
           className='btn btn-outline-secondary'
           onClick={() =>
-            this.props.changeGlassess(
-              glassess.source,
-              glassess.price,
-              glassess.name
+            this.props.changeGlasses(
+              glasses.source,
+              glasses.price,
+              glasses.name
             )
           }
         >
           <img
-            src={glassess.source}
+            src={glasses.source}
             alt='hinh'
             style={{ width: 100, borderRadius: 20 }}
           />
@@ -26,4 +26,4 @@ class GlassessSection extends Component {
   }
 }
 
-export default GlassessSection;
+export default GlassesSection;
