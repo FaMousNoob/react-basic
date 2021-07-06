@@ -1,7 +1,7 @@
 import './showroom_car/style.scss';
 // import StateLessComponent from './demoComponents/stateLessComponents';
 // import StateFullComponent from './demoComponents/stateFullComponents';
-// import ExampleDivComponent from './example-div-component/index';
+import ExampleDivComponent from './example-div-component/index';
 // import DemoDataBinding from './data-binding/DemoDataBinding';
 // import HandleEvent from './handleEvent/HandleEvent';
 // import DemoLogin from './demo-login/login';
@@ -15,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      {/* <ExampleDivComponent /> */}
+      <ExampleDivComponent />
       {/* <DemoDataBinding /> */}
       {/* <HandleEvent /> */}
       {/* <DemoLogin /> */}
@@ -23,7 +23,7 @@ function App() {
       {/* <Parent /> */}
       {/* <DemoListAndKeys></DemoListAndKeys> */}
       {/* <HomeWork /> */}
-      <ShoppingCart />
+      {/* <ShoppingCart /> */}
     </div>
   );
 }

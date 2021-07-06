@@ -58,6 +58,9 @@ class ShoppingCart extends Component {
       giaBan: 5700000,
       hinhAnh: './img/vsphone.jpg',
     },
+    cartList: {
+      
+    }
   };
 
   handleAddCart = (prod) => {
