@@ -39,9 +39,9 @@ class ProductList extends Component {
     return (
       <div>
         <section id='smartphone' className='container-fluid pt-5 pb-5 bg-dark'>
-          <h1 className='text-white text-center'>WEB NÀY THUỘC QUỀN SỞ HỮU CỦA NGÔ BẢO PHƯƠNG TẢO</h1>
+          <h1 className='text-white text-center'>shop</h1>
           <div className='row'>
-            {this.renderProductItem}
+            {this.renderProductItem()}
           </div>
         </section>
       </div>

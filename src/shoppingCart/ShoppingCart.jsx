@@ -58,14 +58,34 @@ class ShoppingCart extends Component {
       giaBan: 5700000,
       hinhAnh: './img/vsphone.jpg',
     },
-    cartList: {
-      
+    cartList: [],
+  };
+
+  handleDeleteCart = (maSP) => {
+    const { cartList } = this.state;
+    const index = cartList.findIndex((cart) => cart.maSP === maSP);
+    if (index !== -1) {
+      cartList.splice(index, 1);
+
+      this.setState({
+        cartList,
+      });
     }
   };
 
   handleAddCart = (prod) => {
-    console.log(prod);
-    let newCartList = [...this.state.cartList, prod];
+    const { cartList } = this.state;
+    const index = cartList.findIndex((cart) => cart.maSP === prod.maSP);
+    let newCartList = [];
+    if (index === -1) {
+      const newCart = { ...prod, soLuong: 1 };
+      newCartList = [...this.state.cartList, newCart];
+    } else {
+      cartList[index].soLuong += 1;
+      newCartList = cartList;
+    }
+
+    // let newCartList = [...this.state.cartList, prod];
 
     this.setState({
       cartList: newCartList,
@@ -97,7 +117,10 @@ class ShoppingCart extends Component {
             prodList={this.prodList}
             changeProdDetail={this.changeProdDetail}
           />
-          <ModalCard />
+          <ModalCard
+            handleDeleteCart={this.handleDeleteCart}
+            cartList={this.state.cartList}
+          />
           <ProductDetail prodDetail={this.state.prodDetail} />
         </section>
       </div>

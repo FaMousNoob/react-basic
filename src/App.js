@@ -1,7 +1,7 @@
 import './showroom_car/style.scss';
 // import StateLessComponent from './demoComponents/stateLessComponents';
 // import StateFullComponent from './demoComponents/stateFullComponents';
-import ExampleDivComponent from './example-div-component/index';
+// import ExampleDivComponent from './example-div-component/index';
 // import DemoDataBinding from './data-binding/DemoDataBinding';
 // import HandleEvent from './handleEvent/HandleEvent';
 // import DemoLogin from './demo-login/login';
@@ -9,13 +9,14 @@ import ExampleDivComponent from './example-div-component/index';
 // import Parent from './demo-props/Parent';
 // import DemoListAndKeys from './list-and-key/DemoListAndKeys';
 // import HomeWork from './homework/HomeWork';
-import ShoppingCart from './shoppingCart/ShoppingCart';
+// import ShoppingCart from './shoppingCart/ShoppingCart';
+import XucXac from './xucXac-app/XucXac';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <ExampleDivComponent />
+      {/* <ExampleDivComponent /> */}
       {/* <DemoDataBinding /> */}
       {/* <HandleEvent /> */}
       {/* <DemoLogin /> */}
@@ -24,6 +25,7 @@ function App() {
       {/* <DemoListAndKeys></DemoListAndKeys> */}
       {/* <HomeWork /> */}
       {/* <ShoppingCart /> */}
+      <XucXac />
     </div>
   );
 }
