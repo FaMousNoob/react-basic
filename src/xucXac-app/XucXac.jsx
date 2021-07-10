@@ -16,9 +16,12 @@ class XucXac extends Component {
             position: 'fixed',
             left: 0,
             top: 0,
-          }}>
+          }}
+        >
           <div className='container'>
-            <h3 className='display-4 text-center'>BÀI TẬP GAME XÚC XẮC</h3>
+            <h3 className='display-4 text-center text-red-700'>
+              BÀI TẬP GAME XÚC XẮC
+            </h3>
             <div className='row text-center'>
               <div className='col-4'>
                 <button className='bg-danger display-4 p-5 text-light'>

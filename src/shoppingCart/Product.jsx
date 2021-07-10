@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Product extends Component {
   handleClick = () => {
     const changeProdDetail = this.props.changeProdDetail;
-    const prodDetail = this.props.product;
+    constprodDetail = this.props.product;
 
     changeProdDetail(prodDetail);
     // console.log(object);
