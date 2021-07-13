@@ -19,7 +19,7 @@ class XucXac extends Component {
           }}
         >
           <div className='container'>
-            <h3 className='display-4 text-center text-red-700'>
+            <h3 className='display-4 text-center text-green-700'>
               BÀI TẬP GAME XÚC XẮC
             </h3>
             <div className='row text-center'>
