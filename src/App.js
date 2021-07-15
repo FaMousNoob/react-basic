@@ -11,7 +11,7 @@ import './showroom_car/style.scss';
 // import HomeWork from './homework/HomeWork';
 // import ShoppingCart from './shoppingCart/ShoppingCart';
 import XucXac from './xucXac-app/XucXac';
-import DemoLifeCycle from './demoLifeCycle/DemoLifeCycle';
+// import DemoLifeCycle from './demoLifeCycle/DemoLifeCycle';
 import './App.css';
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
       {/* <DemoListAndKeys></DemoListAndKeys> */}
       {/* <HomeWork /> */}
       {/* <ShoppingCart /> */}
-      {/* <XucXac />     */}
-      <DemoLifeCycle />
+      <XucXac />    
+      {/* <DemoLifeCycle /> */}
     </div>
   );
 }

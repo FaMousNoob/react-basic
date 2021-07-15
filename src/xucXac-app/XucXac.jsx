@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import KetQua from './KetQua';
-import XucXacItem from './XucXacItem';
+import BanChoi from './BanChoi';
 import './style.scss';
 
 class XucXac extends Component {
@@ -22,25 +22,7 @@ class XucXac extends Component {
             <h3 className='display-4 text-center text-green-700'>
               BÀI TẬP GAME XÚC XẮC
             </h3>
-            <div className='row text-center'>
-              <div className='col-4'>
-                <button className='bg-danger display-4 p-5 text-light'>
-                  TÀI{' '}
-                </button>
-              </div>
-              <div className='col-4'>
-                <div className='d-flex justify-content-center'>
-                  <XucXacItem />
-                  <XucXacItem />
-                  <XucXacItem />
-                </div>
-              </div>
-              <div className='col-4'>
-                <button className='bg-dark display-4 p-5 text-light'>
-                  XỈU{' '}
-                </button>
-              </div>
-            </div>
+           <BanChoi />
           </div>
           <div className='container text-center display-4'>
             <KetQua />

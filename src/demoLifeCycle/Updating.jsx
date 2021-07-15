@@ -9,21 +9,21 @@ class Updating extends Component {
     this.name = 'tảo';
   }
   render() {
-    console.log('render');
+    console.log('render from updating');
     return (
       <div>
         <h2>Updating</h2>
         <h2>tuổi {this.state.age}</h2>
         <p>tên {this.name}</p>
         <button
-          className='btn'
+          className='btn btn-primary'
           onClick={() => {
             this.setState({ age: (this.state.age += 1) });
           }}>
           {' '}
           tăng tuổi
         </button>
-        <button
+        <button className='btn btn-danger'
           onClick={() => {
               this.name = 'new shits'
             this.forceUpdate();
@@ -35,8 +35,8 @@ class Updating extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-      console.log('PrevState', prevState);
-      console.log('this.state', this.state);
+      console.log('PrevState from updating', prevState);
+      console.log('this.state from updating', this.state);
   }
 }
 
